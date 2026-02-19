@@ -1,0 +1,43 @@
+# 数组
+
+
+| Leetcode |  Memo | Tags | Difficulty |
+| :----:| :----: | :----: |:----:|
+| [707.Design Linked List](https://leetcode.cn/problems/design-linked-list/description/) | [memo](https://github.com/Rishi-Mishima/miki-algorithm-roadmap/blob/main/src/array/LC707_DesignLinkedList.java) | Arrays | 🟡 Medium 
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+
+## 静态数组 VS 动态数组
+
+### 静态数组
+「静态数组」就是一块连续的内存空间，我们可以通过索引来访问这块内存空间中的元素，这才是数组的原始形态。
+
+而「动态数组」是编程语言为了方便我们使用，在静态数组的基础上帮我们添加了一些常用的 API，比如 `push`, `insert`, `remove` 等等方法，这些 API 可以让我们更方便地操作数组元素，不用自己去写代码实现这些操作。
+
+定义静态数组
+```java
+int[] arr = new int[10];
+```
+因为我可以通过首地址和索引直接计算出目标元素的内存地址。计算机的内存寻址时间可以认为是 `O(1)`，所以数组的随机访问时间复杂度是 `O(1)`。
+
+
+静态数组的**增删查改**操作的时间复杂度是：
+-  增：
+    - 在末尾追加元素：O(1)。
+    - 在中间（非末尾）插入元素：O(N)。
+    > 移动次数：≈ N - index 
+    >> 最坏情况（插在最前面）：要移动 N 个元素
+- 删：
+    - 删除末尾元素：O(1)O(1)。
+    - 删除中间（非末尾）元素：O(N)。
+- 查：给定指定索引，查询索引对应的元素的值，时间复杂度 O(1)。
+- 改：给定指定索引，修改索引对应的元素的值，时间复杂度 O(1)。
+
+
+### 动态数组 (Dynamic Arrays)
+
+ [707.Design Linked List](https://leetcode.cn/problems/design-linked-list/description/)
+
+- using **Arrays** to solve this problem 
