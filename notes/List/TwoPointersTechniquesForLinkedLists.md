@@ -90,3 +90,19 @@ large.next = null 是切断 large 链表最后一个节点和原链表的残留�
 - 遍历结束后，large 指针停在 large 链表的最后一个节点（比如上面例子中的 3）；
 - 执行 large.next = null 后，3 的 next 被强制置为空，彻底和原链表的 2 断开；
 - 此时拼接 small.next = largeHead.next，链表变成：1 -> 2 -> 4 -> 3 -> null，是正常的无环链表。
+
+## 23. 合并K个升序链表
+
+🔗 https://leetcode.cn/problems/merge-k-sorted-lists/solutions/2384305/liang-chong-fang-fa-zui-xiao-dui-fen-zhi-zbzx/
+
+方法一: 分治 (递归)
+
+写法一: 递归
+
+> 分治法（归并排序思想）：把 K 个链表不断两两合并，最终合并成一个有序链表。
+
+> 递归写法: 就是把链表分成LEFT和RIGHT,然后套用LC21 合并两个升序链表
+
+复杂度分析
+- 时间复杂度：O(Llogm)，其中 m 为 lists 的长度，L 为所有链表的长度之和。
+- 每个节点参与链表合并的次数为 O(logm) 次，一共有 L 个节点，所以总的时间复杂度为 `O(Llogm)`。
